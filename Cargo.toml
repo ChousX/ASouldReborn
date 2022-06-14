@@ -1,0 +1,16 @@
+[package]
+name = "ASouldReborn"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[dependencies]
+bevy = { version = "0.7.0", features = ["dynamic"] }
+kayak_ui = { git="https://github.com/StarArawn/kayak_ui",  features = ["bevy_renderer"] }
+bevy_ecs_tilemap = "0.6"
